@@ -24,4 +24,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/event-logger:$IMAGE_TAG
             docker stop event-logger || true
             docker rm event-logger || true
-            docker run -d --restart always --name event-logger               --env-file .env               ${{ secrets.DOCKERHUB_USERNAME }}/event-logger:$IMAGE_TAG
+            docker run -d --restart always --name event-logger --env-file .env ${{ secrets.DOCKERHUB_USERNAME }}/event-logger:$IMAGE_TAG
