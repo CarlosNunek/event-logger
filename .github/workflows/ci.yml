@@ -10,6 +10,23 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    services:
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+      influxdb:
+        image: influxdb:2.7
+        ports:
+          - 8086:8086
+        env:
+          DOCKER_INFLUXDB_INIT_MODE: setup
+          DOCKER_INFLUXDB_INIT_USERNAME: admin
+          DOCKER_INFLUXDB_INIT_PASSWORD: admin123
+          DOCKER_INFLUXDB_INIT_ORG: my-org
+          DOCKER_INFLUXDB_INIT_BUCKET: eventos
+          DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ICusY4BPCbyxTKIxAtp7ciEalt96codUyofHs6wzANAmAH0TX9vTOGzMXor3Ryzgys-gfAHCUszY1WOcNz4v5A==
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
