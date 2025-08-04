@@ -1,0 +1,16 @@
+# Archivos binarios
+eventlogger
+
+# Archivos temporales y build
+*.log
+*.out
+*.exe
+
+# Go cache
+/vendor/
+/bin/
+/dist/
+
+# Editor
+.vscode
+.idea

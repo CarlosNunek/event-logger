@@ -1,0 +1,5 @@
+# Ignorar todo lo que no se necesita en la imagen
+.git
+*.log
+.vscode
+README.md
