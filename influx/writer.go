@@ -13,7 +13,7 @@ import (
 var writeAPI api.WriteAPIBlocking
 
 func init() {
-	url := config.GetEnv("INFLUX_URL", "http://localhost:8086")
+	url := config.GetEnv("INFLUX_URL", "http://44.219.169.151:8086")
 	token := config.GetEnv("INFLUX_TOKEN", "ICusY4BPCbyxTKIxAtp7ciEalt96codUyofHs6wzANAmAH0TX9vTOGzMXor3Ryzgys-gfAHCUszY1WOcNz4v5A==")
 	org := config.GetEnv("INFLUX_ORG", "my-org")
 	bucket := config.GetEnv("INFLUX_BUCKET", "eventos")
