@@ -20,5 +20,5 @@ Microservicio desarrollado en Go que escucha eventos desde Redis (por canales co
 
 ---
 
-### 🛠 Instalación local
+### 🛠 Ejecucion local
 go run main.go
